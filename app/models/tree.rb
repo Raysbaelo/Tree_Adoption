@@ -5,8 +5,7 @@ class Tree < ApplicationRecord
   validates :description, presence: true, length: { in: 20..280 }
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 1 }
   validates :quantity_per_year, presence: true, numericality: { greater_than_or_equal_to: 1 }
-  validates :fruits, presence: true
+  validates :fruit, presence: true
   validates :name, presence: true
   validates :address, presence: true
-
 end
