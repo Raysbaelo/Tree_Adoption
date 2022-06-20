@@ -1,0 +1,12 @@
+ <div class="row">
+    <% @trees.each do |tree| %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to tree_path(tree), class:"text-decoration-none" do %>
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+            <%= tree.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
