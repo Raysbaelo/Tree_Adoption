@@ -1,27 +1,26 @@
 class TreesController < ApplicationController
-  before_action :set_tree, only: [:update, :edit, :show, ]
+  before_action :set_tree, only: [:update, :edit, :show, :destroy ]
 
   def index
     @trees = Tree.all
   end
 
   def show
-    @adoption = Adoption.new
-    @adoption_dates = @tree.adoptions.map do |adoption|
-      {
-        from: adoption.starts_at,
-        to: adoption.ends_at
-      }
-    end
-    @review = Review.new
+    # @adoption = Adoption.new
+    # @adoption_dates = @tree.adoptions.map do |adoption|
+    #   {
+    #     from: adoption.starts_at,
+    #     to: adoption.ends_at
+    #   }
+    # @review = Review.new
   end
 
   def new
-    @tree = tree.new
+    @tree = Tree.new
   end
 
   def create
-    @tree = tree.new(tree_params)
+    @tree = Tree.new(tree_params)
     @tree.user = current_user
 
     if @tree.save
@@ -42,7 +41,7 @@ class TreesController < ApplicationController
   end
 
   def destroy
-    @tree = tree.find(params[:id])
+    @tree = Tree.find(params[:id])
     @tree.destroy
     redirect_to trees_path(@trees)
   end
@@ -50,10 +49,10 @@ class TreesController < ApplicationController
   private
 
   def set_tree
-    @tree = tree.find(params[:id])
+    @tree = Tree.find(params[:id])
   end
 
   def tree_params
-    params.require(:tree).permit(:name, :description, :price_per_year, :fruit)
+    params.require(:tree).permit(:name, :description, :price_per_year, :quantity_per_year, :fruit)
   end
 end

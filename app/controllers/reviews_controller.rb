@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @tree = Tree.find(params[:Tree_id])
+    @tree = Tree.find(params[:tree_id])
     @review.tree = @tree
     if @review.save
       redirect_to tree_path(@tree)
@@ -18,7 +18,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to trees_path(@Reviews)
+    redirect_to trees_path(@reviews)
   end
 
   private

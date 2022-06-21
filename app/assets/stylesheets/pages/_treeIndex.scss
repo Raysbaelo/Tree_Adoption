@@ -1,0 +1,16 @@
+// Specific CSS for your home-page
+.CardsContainer {
+  height: 40vh;
+  width: 40vw;
+  background-color: rgb(201, 246, 190);
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+
+}
+
+.BigCardsconatainer {
+  display: flex;
+  justify-content: space-evenly;
+}
