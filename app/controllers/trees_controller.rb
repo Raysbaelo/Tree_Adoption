@@ -1,5 +1,5 @@
 class TreesController < ApplicationController
-  before_action :set_tree, only: [:update, :edit, :show, :destroy ]
+  before_action :set_tree, only: [:update, :edit, :show]
 
   def index
     @trees = Tree.all
