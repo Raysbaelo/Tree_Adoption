@@ -1,9 +1,21 @@
+
+  <div class="navbarperso">
+  <%= image_tag "arbre.png", class:"arbreimg" %>
+        <a class="navlink" href="#Home">Home</a>
+    <a class="navlink" href="#Adoption">Adoptions</a>
+    <a class="navlink" href="#Find a tree">Find</a>
+    <a class="navlink" href="#Find a tree">Hello</a>
+        <%= image_tag "arbre.png", class:"arbreimg" %>
+  </div>
+
 <H1> Show of trees</H1>
     <h1><%= @tree.name %> </h1>
         <h2><%= @tree.description%></h2>
         <h3><p><%= @tree.price_per_year%> $</p></h3>
         <h3><%= @tree.fruit%></h3>
         <h3><%= @tree.quantity_per_year%></h3>
-        <%= link_to "Back", :back %>
 
+<%= link_to "Adopt it!", new_tree_adoption_path(@tree) %>
+<%= link_to "edit", edit_tree_url(@tree) %>
+ <%= link_to "Back", :back %>
  <%= link_to "delete", tree_path(@tree), method: :delete, data: { confirm: "Are you sure you want to remove your tree 🌳 ? ", class: 'text-danger'} %>

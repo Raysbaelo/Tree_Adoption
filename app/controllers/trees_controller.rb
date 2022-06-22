@@ -25,7 +25,7 @@ class TreesController < ApplicationController
 
     if @tree.save
 
-      redirect_to tree_path(@tree)
+      redirect_to trees_path(@trees)
 
     else
       render :new
@@ -37,7 +37,7 @@ class TreesController < ApplicationController
 
   def update
     @tree.update(tree_params)
-    redirect_to tree_path(@tree)
+    redirect_to trees_path(@trees)
   end
 
   def destroy

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="booking-form">
+    <div class="booking-content">
+      <%= simple_form_for [@tree, @adoption] do |f| %>
+        <div class="booking-input">
+          <%= f.input :starts_date, label: "Save your dates:",
+                                as: :date,
+                                required: false,
+                                input_html: { id: "range_start", class: "d-none"} %>
+          <%= f.input :ends_date, label: false,
+                              as: :date,
+                              required: false,
+                              input_html: { id: "range_end", class: "d-none" } %>
+        </div>
+        <div class="form-button">
+          <%= f.button :submit, "Adopt!", class: "form-button-text" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

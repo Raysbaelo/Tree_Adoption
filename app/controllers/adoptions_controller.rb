@@ -1,6 +1,5 @@
 class AdoptionsController < ApplicationController
   def new
-    @tree = Superpower.find(params[:tree_id])
     @adoption = adoption.new
   end
 
