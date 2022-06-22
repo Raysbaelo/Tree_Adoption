@@ -1,14 +1,59 @@
 // Specific CSS for your home-page
 .CardsContainer {
-  height: 40vh;
-  width: 40vw;
-  background-color: rgb(201, 246, 190);
+  height: 20vh;
+  width: 15vw;
+  background-color: rgb(250, 151, 115);
   display: flex;
   justify-content: center;
-  justify-self: center;
   align-items: center;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
 
 }
+
+.arbreimg {
+  height: 50px;
+
+}
+
+.navlink {
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 2px solide grey;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 100vw;
+  margin-bottom: 10%;
+  background-color: lightcoral;
+  border-radius: 25px;
+  background-image: url(treebanner.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  filter: opacity(0.8);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.banner h1 {
+  margin: 0 auto;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  color: #3b465a;
+}
+
+
+
 
 .BigCardsconatainer {
   display: flex;
